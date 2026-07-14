@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { OrbitModule } from './orbit/orbit.module';
-import { GeminiModule } from './gemini/gemini.module';
+import { AiModule } from './ai/ai.module';
 
 @Module({
   imports: [
@@ -9,7 +9,7 @@ import { GeminiModule } from './gemini/gemini.module';
       isGlobal: true,
     }),
     OrbitModule,
-    GeminiModule,
+    AiModule,
   ],
 })
 export class AppModule {}

@@ -1,13 +1,13 @@
 import { Injectable } from '@nestjs/common';
-import { GeminiService } from '../gemini/gemini.service';
+import { AiService } from '../ai/ai.service';
 
 @Injectable()
 export class OrbitService {
   constructor(
-    private readonly geminiService: GeminiService,
-  ) {}
+    private readonly aiService: AiService,
+){}
 
   async chat(prompt: string): Promise<string> {
-    return this.geminiService.chat(prompt);
+    return this.aiService.chat(prompt);
   }
 }
